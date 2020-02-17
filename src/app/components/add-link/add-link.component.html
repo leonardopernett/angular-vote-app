@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-6 my-3">
+        <div class="card">
+            <div class="card-header bg-dark text-center">
+                Add Link
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" #title name="title" class="form-control" placeholder="title" id="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" #link name="link" class="form-control" placeholder="link" id="">
+                    </div>
+                    <button (click)="addlinks(title, link)" class="btn btn-primary">submit link</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <app-list-link *ngFor="let link of links" [link]="link"></app-list-link>
+    </div>
+</div>
